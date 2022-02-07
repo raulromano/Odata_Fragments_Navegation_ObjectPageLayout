@@ -1,0 +1,38 @@
+<mvc:View xmlns:form="sap.ui.layout.form"
+    xmlns:uxap="sap.uxap" controllerName="rrm.controller.S2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+
+    <Page navButtonPress="onButtonPress" showNavButton="true">
+        <uxap:ObjectPageLayout>
+
+            <uxap:headerTitle>
+                <uxap:ObjectPageHeader >
+
+                    <uxap:expandedHeading>
+                    </uxap:expandedHeading>
+
+                    <uxap:snappedHeading>
+                    </uxap:snappedHeading>
+
+                    <uxap:expandedContent>
+                    </uxap:expandedContent>
+
+                    <uxap:expandedContent>
+                    </uxap:expandedContent>
+
+                    <uxap:expandedContent>
+                    </uxap:expandedContent>
+
+
+                </uxap:ObjectPageHeader>
+            </uxap:headerTitle>
+
+            <uxap:headerContent>
+
+            </uxap:headerContent>
+
+        </uxap:ObjectPageLayout>
+    </Page>
+
+</mvc:View>

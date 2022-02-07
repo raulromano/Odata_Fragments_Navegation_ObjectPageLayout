@@ -1,0 +1,122 @@
+{
+    "_version": "1.17.0",
+    "sap.app": {
+        "id": "rrm",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "dataSources": {
+            "mainService": {
+                "uri": "/V2/(S(eh10zbbvzhmbellfgwmw2o4oraulromanomendonca))/OData/OData.svc/",
+                "type": "OData",
+                "settings": {
+                    "odataVersion": "2.0",
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.71.21",
+            "libs": {
+                "sap.ui.core": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "rrm.i18n.i18n"
+                }
+            },
+            "modelDefault": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {
+                    "defaultBindingMode": "TwoWay",
+                    "defaultCountMode": "Inline",
+                    "refreshAfterChange": false
+                }
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "rrm.view",
+                "controlAggregation": "beginColumnPages",
+                "controlId": "app",
+                "clearControlAggregation": false
+            },
+            "routes": [
+                {
+                    "name": "inicial",
+                    "pattern": "",
+                    "target": [
+                        "S1"
+                    ]
+                },
+                {
+                    "name": "detailProducts",
+                    "pattern": "detailProduct/{ID}/{Name}/{Price}",
+                    "target": [
+                        "S1",
+                        "S2"
+                    ]
+                }
+            ],
+            "targets": {
+                "S1": {
+                    "viewId": "S1",
+                    "viewName": "S1"
+                },
+                "S2": {
+                    "viewId": "S2",
+                    "viewName": "S2",
+                    "controlAggregation": "midColumnPages"
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "rrm.view.S0",
+            "type": "XML",
+            "async": true,
+            "id": "S0"
+        }
+    }
+}

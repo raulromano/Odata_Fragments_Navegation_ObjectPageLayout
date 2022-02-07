@@ -1,0 +1,7 @@
+<mvc:View xmlns:f="sap.f" controllerName="rrm.controller.S0"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Shell id="shell">
+        <f:FlexibleColumnLayout id="app" layout="{modelControl>/layoutFlexible}"/>
+    </Shell>
+</mvc:View>
