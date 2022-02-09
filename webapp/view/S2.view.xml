@@ -1,38 +1,50 @@
-<mvc:View xmlns:form="sap.ui.layout.form"
+<mvc:View xmlns:table="sap.ui.table"
+    xmlns:form="sap.ui.layout.form"
     xmlns:uxap="sap.uxap" controllerName="rrm.controller.S2"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
 
-    <Page navButtonPress="onButtonPress" showNavButton="true">
-        <uxap:ObjectPageLayout>
+    <Page id="_IDGenPage1" navButtonPress="onButtonPress" showNavButton="true">
+        <uxap:ObjectPageLayout id="_IDGenObjectPageLayout1">
 
-            <uxap:headerTitle>
-                <uxap:ObjectPageHeader >
+            <uxap:sections>
+                <uxap:ObjectPageSection id="_IDGenObjectPageSection1" title="Products">
+                    <uxap:subSections>
+                        <uxap:ObjectPageSubSection id="products" title="Products Detail">
+                            <uxap:blocks>
+                               <products:ProductsBlock id="productsblock"/>
+                            </uxap:blocks>
+                        </uxap:ObjectPageSubSection>
 
-                    <uxap:expandedHeading>
-                    </uxap:expandedHeading>
+                    </uxap:subSections>
 
-                    <uxap:snappedHeading>
-                    </uxap:snappedHeading>
-
-                    <uxap:expandedContent>
-                    </uxap:expandedContent>
-
-                    <uxap:expandedContent>
-                    </uxap:expandedContent>
-
-                    <uxap:expandedContent>
-                    </uxap:expandedContent>
+                </uxap:ObjectPageSection>
 
 
-                </uxap:ObjectPageHeader>
-            </uxap:headerTitle>
+                <uxap:ObjectPageSection id="_IDGenObjectPageSection3" title="Categories">
+                    <uxap:subSections>
+                        <uxap:ObjectPageSubSection id="categories" title="Categories Detail">
+                            <uxap:blocks>
+                               <categories:CategoriesBlock id="categoriesblock"/>
+                            </uxap:blocks>
+                        </uxap:ObjectPageSubSection>
+                    </uxap:subSections>
 
-            <uxap:headerContent>
+                </uxap:ObjectPageSection>
 
-            </uxap:headerContent>
+                <uxap:ObjectPageSection id="_IDGenObjectPageSection2" title="Suppliers">
+                    <uxap:subSections>
+                        <uxap:ObjectPageSubSection id="supplier" title="Suppliers Detail">
+                            <uxap:blocks>
+                                <suppliers:SupplierBlock id="supplierblock"/>
+                            </uxap:blocks>
+                        </uxap:ObjectPageSubSection>
+                    </uxap:subSections>
 
-        </uxap:ObjectPageLayout>
-    </Page>
+                </uxap:ObjectPageSection>
 
-</mvc:View>
+
+            </uxap:ObjectPageLayout>
+        </Page>
+
+    </mvc:View>

@@ -1,0 +1,26 @@
+<mvc:View xmlns:table="sap.ui.table"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:uxap="sap.uxap" controllerName="rrm.controller.CategoriesBlock"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+
+
+    <table:Table id="_IDGenTable3" rows="{modelDefault/Categories}">
+        <table:columns>
+            <table:Column id="_IDGenColumn6">
+                <Label id="_IDGenLabel6" text="ID"/>
+                <table:template>
+                    <Text id="_IDGenText9" text="{modelDefault>ID}"/>
+                </table:template>
+            </table:Column>
+
+            <table:Column id="_IDGenColumn7">
+                <Label id="_IDGenLabel7" text="Name"/>
+                <table:template>
+                    <Text id="_IDGenText10" text="{modelDefault>name}"/>
+                </table:template>
+            </table:Column>
+        </table:columns>
+    </table:Table>
+
+</mvc:View>

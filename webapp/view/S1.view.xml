@@ -2,24 +2,24 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
 
-    <Page title="Products">
-        <SearchField value="{modelControl>/valueSearchProducts}" search="onSearch"/>
+    <Page id="_IDGenPage1" title="Products">
+        <SearchField id="_IDGenSearchField1" value="{modelControl>/valueSearchProducts}" search="onSearch"/>
         <List id="listProducts" items="{modelDefault>/Products}" itemPress="onItemPress">
             <items>
-                <StandardListItem title="{modelDefault>ID}" description="{modelDefault>Name}" icon="sap-icon://product" info="{modelDefault>Price}" type="Navigation"/>
+                <StandardListItem id="_IDGenStandardListItem1" title="{modelDefault>ID}" description="{modelDefault>Name}" icon="sap-icon://product" info="{modelDefault>Price}" type="Navigation"/>
             </items>
         </List>
 
         <footer>
-            <Bar >
+            <Bar id="_IDGenBar1" >
                 <contentLeft>
-                    <Button text="Create new products" press="onCreateNewProducts"/>
+                    <Button id="_IDGenButton1" text="Create new products" press="onCreateNewProducts"/>
                 </contentLeft>
                 <contentMiddle>
-                    <Button text="Modify products" press="onModifyProducts"/>
+                    <Button id="_IDGenButton2" text="Modify products" press="onModifyProducts"/>
                 </contentMiddle>
                 <contentRight>
-                    <Button text="API - Documentation" press="onApiDocumentation"/>
+                    <Button id="_IDGenButton3" text="API - Documentation" press="onApiDocumentation"/>
                 </contentRight>
             </Bar>
         </footer>

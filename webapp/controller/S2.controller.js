@@ -12,6 +12,8 @@ sap.ui.define([
                 this._oModelListProduct = new sap.ui.model.json.JSONModel()
                 this.getView().setModel(this._oModelListProduct, "modelListProduct")
                 this.getOwnerComponent().getRouter().getRoute("detailProducts").attachPatternMatched(this.onPatternMatched, this)
+            
+                
             },
 
 
@@ -30,6 +32,8 @@ sap.ui.define([
 
             }
 
+
+           
 
         });
     });

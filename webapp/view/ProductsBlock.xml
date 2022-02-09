@@ -1,0 +1,41 @@
+<mvc:View xmlns:table="sap.ui.table"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:uxap="sap.uxap" controllerName="rrm.controller.ProductsBlock"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+
+
+    <table:Table id="_IDGenTable1" rows="{modelDefault/Products}">
+        <table:columns>
+            <table:Column id="_IDGenColumn1">
+                <Label id="_IDGenLabel1" text="ID"/>
+                <table:template>
+                    <Text id="_IDGenText1" text="{modelDefault>ID}"/>
+                </table:template>
+            </table:Column>
+
+            <table:Column id="_IDGenColumn2">
+                <Label id="_IDGenLabel2" text="Name"/>
+                <table:template>
+                    <Text id="_IDGenText2" text="{modelDefault>name}"/>
+                </table:template>
+            </table:Column>
+
+            <table:Column id="_IDGenColumn3">
+                <Label id="_IDGenLabel3" text="Realesed Date"/>
+                <table:template>
+                    <Text id="_IDGenText3" text="{modelDefault>ReleaseDate}"/>
+                </table:template>
+            </table:Column>
+
+            <table:Column id="_IDGenColumn4">
+                <Label id="_IDGenLabel4" text="Discontinued Date"/>
+                <table:template>
+                    <Text id="_IDGenText4" text="{modelDefault>DiscontinuedDate}"/>
+                </table:template>
+            </table:Column>
+        </table:columns>
+    </table:Table>
+
+
+</mvc:View>

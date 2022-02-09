@@ -1,0 +1,47 @@
+<mvc:View xmlns:table="sap.ui.table"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:uxap="sap.uxap" controllerName="rrm.controller.SupplierBlock"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+
+    <table:Table id="_IDGenTable2" rows="{modelDefault/Suppliers}">
+        <table:columns>
+            <table:Column id="_IDGenColumn5">
+                <Label id="_IDGenLabel5" text="ID"/>
+                <table:template>
+                    <Text id="_IDGenText8" text="{modelDefault>ID}"/>
+                </table:template>
+            </table:Column>
+
+            <table:Column id="_IDGenColumn2">
+                <Label id="_IDGenLabel2" text="Name"/>
+                <table:template>
+                    <Text id="_IDGenText2" text="{modelDefault>name}"/>
+                </table:template>
+            </table:Column>
+
+
+            <table:Column id="_IDGenColumn3">
+                <Label id="_IDGenLabel3" text="Concurrency"/>
+                <table:template>
+                    <Text id="_IDGenText3" text="{modelDefault>Concurrency}"/>
+                </table:template>
+            </table:Column>
+
+
+            <table:Column id="_IDGenColumn4">
+                <Label id="_IDGenLabel4" text="Address"/>
+                <table:multiLabels>
+                    <Text id="_IDGenText4" text="{modelDefault>Address/Street}"/>
+                    <Text id="_IDGenText5" text="{modelDefault>Address/City}"/>
+                    <Text id="_IDGenText6" text="{modelDefault>Address/State}"/>
+                    <Text id="_IDGenText7" text="{modelDefault>Address/ZipCod}"/>
+                </table:multiLabels>
+            </table:Column>
+
+        </table:columns>
+    </table:Table>
+
+</Page>
+
+</mvc:View>
